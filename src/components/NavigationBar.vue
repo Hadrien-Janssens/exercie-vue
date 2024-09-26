@@ -10,7 +10,8 @@
           :class="isOpen ? 'block' : 'hidden'"
         ></i>
         <div class="flex flex-col gap-5 h-full">
-          <Link to="/">Home</Link> <Link to="/about">About</Link>
+          <Link @click="isOpen = !isOpen" to="/">Home</Link>
+          <Link @click="isOpen = !isOpen" to="/about">About</Link>
         </div>
       </div>
     </div>
