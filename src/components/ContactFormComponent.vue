@@ -2,22 +2,10 @@
   <form class="max-w-96 mx-auto mt-5">
     <fieldset>
       <h1>Formulaire de contact</h1>
-      <Label for="name">
-        Nom :
-        <input type="text" name="name" id="name" v-model="name" />
-      </Label>
-      <Label for="email">
-        Email :
-        <input type="email" name="email" id="email" v-model="email" />
-      </Label>
-      <Label for="subject">
-        Sujet :
-        <input type="text" name="subject" id="subject" v-model="subject" />
-      </Label>
-      <Label for="message">
-        Message :
-        <input type="text" name="message" id="message" v-model="message" />
-      </Label>
+      <Input type="text" id="name" v-model="name" />
+      <Input type="email" id="email" v-model="email" />
+      <Input type="text" id="subject" v-model="subject" />
+      <Input type="text" id="message" v-model="message" />
     </fieldset>
     <button @click.prevent="showInputValue">Envoyer</button>
   </form>
@@ -32,6 +20,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import Input from "./Input.vue";
 
 const name = ref("");
 const email = ref("");
