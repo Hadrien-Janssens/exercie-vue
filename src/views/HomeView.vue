@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import TitleComponent from "@/components/TitleComponent.vue";
 import Button from "../components/Button.vue";
+import ContactFormComponent from "@/components/ContactFormComponent.vue";
 </script>
 
 <template>
@@ -9,5 +10,6 @@ import Button from "../components/Button.vue";
     <Button>Primary</Button>
     <Button type="secondary">secondary</Button>
     <Button type="danger">danger</Button>
+    <ContactFormComponent />
   </main>
 </template>
