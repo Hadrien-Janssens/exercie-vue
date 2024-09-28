@@ -1,6 +1,6 @@
 <template>
   <Label :for="id">
-    {{ id?.charAt(0).toUpperCase() + id?.slice(1) }} :
+    {{ id && id.charAt(0).toUpperCase() + id.slice(1) }} :
     <input :type="type" :name="id" :id="id" v-model="model" />
   </Label>
 </template>

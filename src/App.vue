@@ -9,6 +9,7 @@ import NavigationBar from "./components/NavigationBar.vue";
     <NavigationBar />
     <div class="wrapper"></div>
   </header>
-
-  <RouterView />
+  <div class="mx-5">
+    <RouterView />
+  </div>
 </template>

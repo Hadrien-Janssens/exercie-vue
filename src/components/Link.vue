@@ -1,5 +1,5 @@
 <template>
-  <RouterLink :to="to" class="text-blue-700 text-xl"><slot></slot></RouterLink>
+  <RouterLink :to="to" class="text-xl"><slot></slot></RouterLink>
 </template>
 
 <script setup lang="ts">
