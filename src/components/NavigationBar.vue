@@ -1,5 +1,6 @@
 <template>
-  <nav class="p-5 flex justify-end">
+  <nav class="p-5 flex justify-between">
+    <DarkMode />
     <div :class="isOpen ? 'block' : 'hidden'">
       <div
         class="absolute right-0 top-0 flex flex-col j gap-5 md:hidden bg-gray-300 h-screen w-1/2 items-end p-5 bg-opacity-10 backdrop-blur-md"
@@ -27,5 +28,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import Link from "./Link.vue";
+import DarkMode from "./DarkMode.vue";
+
 const isOpen = ref(false);
 </script>
