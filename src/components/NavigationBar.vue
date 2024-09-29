@@ -1,14 +1,15 @@
 <template>
   <nav class="p-5 flex justify-between">
     <DarkMode />
-    <div :class="isOpen ? 'block' : 'hidden'">
+    <!-- hamburger menu -->
+    <Transition>
       <div
+        v-if="isOpen"
         class="absolute right-0 top-0 flex flex-col j gap-5 md:hidden bg-gray-300 h-screen w-1/2 items-end p-5 bg-opacity-10 backdrop-blur-md"
       >
         <i
           @click="isOpen = !isOpen"
           class="ri-close-large-line text-4xl md:hidden"
-          :class="isOpen ? 'block' : 'hidden'"
         ></i>
         <div class="flex flex-col gap-5 h-full">
           <Link @click="isOpen = !isOpen" to="/">Home</Link>
@@ -16,7 +17,7 @@
           <Link @click="isOpen = !isOpen" to="/contact">Contact</Link>
         </div>
       </div>
-    </div>
+    </Transition>
     <i @click="isOpen = !isOpen" class="ri-menu-3-fill text-4xl md:hidden"></i>
 
     <div class="hidden md:flex justify-end gap-5">
@@ -34,3 +35,15 @@ import DarkMode from "./DarkMode.vue";
 
 const isOpen = ref(false);
 </script>
+
+<style scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: 0.3s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  transform: translateX(100%);
+}
+</style>

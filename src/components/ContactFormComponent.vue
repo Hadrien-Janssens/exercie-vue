@@ -11,13 +11,14 @@
       <Button c @click.prevent="showInputValue">Envoyer</Button>
     </form>
   </Card>
-
-  <Card v-if="isSend">
-    <p>Nom : {{ name }}</p>
-    <p>Email : {{ email }}</p>
-    <p>Sujet : {{ subject }}</p>
-    <p>Message : {{ message }}</p>
-  </Card>
+  <Transition>
+    <Card v-if="isSend">
+      <p>Nom : {{ name }}</p>
+      <p>Email : {{ email }}</p>
+      <p>Sujet : {{ subject }}</p>
+      <p>Message : {{ message }}</p>
+    </Card>
+  </Transition>
 </template>
 
 <script setup lang="ts">
@@ -37,3 +38,15 @@ const showInputValue = () => {
   isSend.value = !isSend.value;
 };
 </script>
+
+<style scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+</style>
