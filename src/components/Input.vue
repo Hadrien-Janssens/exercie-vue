@@ -9,7 +9,11 @@
 import Input from "./ui/input/Input.vue";
 
 defineProps({
-  type: String,
+  type: {
+    type: String,
+    required: false,
+    default: "text",
+  },
   id: String,
   modelValue: String,
 });

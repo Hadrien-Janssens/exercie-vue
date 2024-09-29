@@ -1,14 +1,14 @@
 <template>
   <TitleComponent>Formulaire</TitleComponent>
   <Card>
-    <form class="max-w-96 mx-auto mt-5">
+    <form class="max-w-96 mx-auto">
       <fieldset>
         <Input type="text" id="name" v-model="name" />
         <Input type="email" id="email" v-model="email" />
         <Input type="text" id="subject" v-model="subject" />
         <Input type="text" id="message" v-model="message" />
       </fieldset>
-      <Button class="mt-3" @click.prevent="showInputValue">Envoyer</Button>
+      <Button c @click.prevent="showInputValue">Envoyer</Button>
     </form>
   </Card>
 

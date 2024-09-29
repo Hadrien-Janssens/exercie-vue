@@ -13,6 +13,7 @@
         <div class="flex flex-col gap-5 h-full">
           <Link @click="isOpen = !isOpen" to="/">Home</Link>
           <Link @click="isOpen = !isOpen" to="/about">About</Link>
+          <Link @click="isOpen = !isOpen" to="/contact">Contact</Link>
         </div>
       </div>
     </div>
@@ -21,6 +22,7 @@
     <div class="hidden md:flex justify-end gap-5">
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
+      <Link to="/contact">Contact</Link>
     </div>
   </nav>
 </template>

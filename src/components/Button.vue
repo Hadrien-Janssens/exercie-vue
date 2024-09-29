@@ -1,5 +1,6 @@
 <template>
   <Button
+    class="my-3"
     :class="{
       ' bg-blue-700 hover:bg-blue-800': props.type === 'primary',
       ' bg-gray-700 hover:bg-gray-800': props.type === 'secondary',
@@ -16,7 +17,7 @@ import { Button } from "./ui/button";
 const props = defineProps({
   type: {
     type: String,
-    default: "primary",
+    default: "",
   },
 });
 </script>
