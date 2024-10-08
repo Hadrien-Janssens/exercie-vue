@@ -3,9 +3,9 @@
 
   <table class="border w-full">
     <tr>
-      <th class="border" @click="sort">nom</th>
-      <th class="border">prenom</th>
-      <th class="border">role</th>
+      <th class="border" @click="sort('nom')">nom</th>
+      <th class="border" @click="sort('prenom')">prenom</th>
+      <th class="border" @click="sort('role')">role</th>
     </tr>
     <tr class="hover:bg-gray-200" v-for="(user, index) in users" :key="index">
       <td
@@ -31,7 +31,9 @@
 </template>
 
 <script setup lang="ts">
-const users = [
+import { ref } from "vue";
+
+const users = ref([
   {
     nom: "Durand",
     prenom: "Alice",
@@ -82,13 +84,24 @@ const users = [
     prenom: "Jacques",
     role: "user",
   },
-];
+]);
+const tri = ref<string | null>(null);
 
-const sort = () => {
-  const sortedUser = users.sort((a, b) => {
-   return a.nom.localeCompare(b.nom, "fr", { ignorePunctuation: true });
+const sort = (champ: string) => {
+  if (tri.value === null || tri.value === "desc") {
+    users.value.sort((a, b) => {
+      return a[champ].localeCompare(b[champ], "fr", {
+        ignorePunctuation: true,
+      });
+    });
+    tri.value = "asc";
+  } else {
+    users.value.sort((a, b) => {
+      return b[champ].localeCompare(a[champ], "fr", {
+        ignorePunctuation: true,
+      });
+    });
+    tri.value = "desc";
   }
-  );
-  console.log(sortedUser);
 };
-</script
+</script>
