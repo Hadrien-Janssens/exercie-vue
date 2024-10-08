@@ -1,0 +1,52 @@
+[
+  {
+    "nom": "Durand",
+    "prenom": "Alice",
+    "role": "admin"
+  },
+  {
+    "nom": "Lemoine",
+    "prenom": "Bruno",
+    "role": "user"
+  },
+  {
+    "nom": "Martin",
+    "prenom": "Caroline",
+    "role": "admin"
+  },
+  {
+    "nom": "Dupont",
+    "prenom": "David",
+    "role": "user"
+  },
+  {
+    "nom": "Lambert",
+    "prenom": "Elodie",
+    "role": "user"
+  },
+  {
+    "nom": "Rousseau",
+    "prenom": "François",
+    "role": "admin"
+  },
+  {
+    "nom": "Moreau",
+    "prenom": "Gabrielle",
+    "role": "user"
+  },
+  {
+    "nom": "Leclerc",
+    "prenom": "Hugo",
+    "role": "user"
+  },
+  {
+    "nom": "Vidal",
+    "prenom": "Isabelle",
+    "role": "admin"
+  },
+  {
+    "nom": "Blanc",
+    "prenom": "Jacques",
+    "role": "user"
+  }
+]

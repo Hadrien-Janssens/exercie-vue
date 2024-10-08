@@ -8,7 +8,7 @@
         <Input type="text" id="subject" v-model="subject" />
         <Input type="text" id="message" v-model="message" />
       </fieldset>
-      <Button c @click.prevent="showInputValue">Envoyer</Button>
+      <Button @click.prevent="showInputValue">Envoyer</Button>
     </form>
   </Card>
   <Transition>
